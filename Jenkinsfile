@@ -5,10 +5,17 @@ pipeline {
     }
     
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Building...'
                 sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'npm test'
             }
         }
     }
