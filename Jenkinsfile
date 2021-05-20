@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        nodejs 'node-12.16.1', 
-        hudson.plugins.sonar.SonarRunnerInstallation 'GrahamScanner'
+        nodejs 'node-12.16.1'
+        'hudson.plugins.sonar.SonarRunnerInstallation' 'GrahamScanner'
     }
     
     stages {
