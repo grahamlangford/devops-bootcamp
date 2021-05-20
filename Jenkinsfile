@@ -21,7 +21,7 @@ pipeline {
         }
 
         stage('Sonar Scan') {
-            def scannerName = tool 'GrahamScanner'
+            def scannerName = tool 'GrahamScanner';
             steps {
                 echo 'Running SonarQube Scan'
                 sh '${scannerName}/bin/sonar-scanner'
