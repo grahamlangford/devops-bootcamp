@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         nodejs 'node-12.16.1'
-        'hudson.plugins.sonar.SonarRunnerInstallation' 'GrahamScanner'
+        // 'hudson.plugins.sonar.SonarRunnerInstallation' 'GrahamScanner'
     }
     
     stages {
@@ -20,11 +20,11 @@ pipeline {
             }
         }
 
-        stage('Sonar Scan') {
-            steps {
-                echo 'Running SonarQube Scan'
-                sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/GrahamScanner/bin/sonar-scanner'
-            }
-        }
+        // stage('Sonar Scan') {
+        //     steps {
+        //         echo 'Running SonarQube Scan'
+        //         sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/GrahamScanner/bin/sonar-scanner'
+        //     }
+        // }
     }
 }
