@@ -23,7 +23,8 @@ pipeline {
         stage('Sonar Scan') {
             steps {
                 echo 'Running SonarQube Scan'
-                sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/GrahamScanner'
+                def scannerName = tool 'GrahamScanner'
+                sh '${scannerName}/bin/sonar-scanner'
             }
         }
     }
